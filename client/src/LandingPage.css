@@ -1,0 +1,32 @@
+
+.landing-nav {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.landing-logo {
+  display: flex;
+  flex-direction: column;  
+  width: fit-content;
+  height: 30vh;
+  margin: 0;
+}
+
+.logo-text-mid {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 100px;
+
+  color: #FDCB6E;
+}
+
+.logo-text-small {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+
+  color: #FDCB6E;
+}
