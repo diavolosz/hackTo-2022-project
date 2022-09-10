@@ -16,7 +16,7 @@
 }
 
 .nav-item-container .nav-item {
-  width: 24%;
+  width: 25%;
   font-size: 20px;
   text-align: center;
 }
@@ -63,6 +63,7 @@
 .nav-icon-container .nav-icons{
   font-size: 40px;
   margin: 0 10px;
+  color: white;
   width: fit-content;
 }
 

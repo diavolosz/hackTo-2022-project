@@ -1,0 +1,188 @@
+.article-body-container {
+  margin: 6em 0 14em 0;
+  height: 600px;
+}
+
+.username-display {
+  font-size: 50px;
+  font-weight: bold;
+  height: 10%;
+  margin: 0 0 1em 0.5em
+}
+
+.content-container {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-list {
+  background-color: var(--secondary-color);
+  height: 100%;
+  width: 45%;
+  border-radius: 24px;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px -8px 16px rgba(255, 255, 255, 0.4), 0px 16px 24px rgba(55, 71, 79, 0.16);
+  overflow-y: scroll;
+}
+
+.inner-list::-webkit-scrollbar {
+  display: none;
+}
+
+.inner-list span {
+  margin: 0.5em 1em;
+  color: white;
+}
+
+.job-item-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  margin: 0.4em auto;
+}
+
+.inner-list .job-name {
+  color: var(--tertiary-color);
+}
+
+.job-icon-control {
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--tertiary-color);
+}
+
+/* ------------------------- */
+
+.resource-container {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mentor-queue {
+  height: 45%;
+  overflow-y: scroll;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0px -8px 16px rgba(255, 255, 255, 0.4), 0px 16px 24px rgba(55, 71, 79, 0.308);
+}
+
+.mentor-queue::-webkit-scrollbar {
+  display: none;
+}
+
+.mentor-queue .mentor-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0.5em 1em;
+}
+
+.mentor-container {
+  height: 67%;
+  width: 95%;
+  margin: 0 auto 2em auto;
+  background-color: var(--secondary-color);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.mentor-inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em auto;
+  width: 90%;
+}
+
+.mentor-inner-wrapper img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.mentor-inner-wrapper div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 60%;
+}
+
+.mentor-name {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.mentor-job {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 5px;
+
+}
+
+.mentor-inner-wrapper .request-meeting-button {
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  margin: 0.5em 0;
+  font-weight: bold;
+  border-radius: 24px;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.request-icon {
+  height: 20px;
+}
+
+/* -------------------------- */
+
+.workshop-item-container {
+  height: 35%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  margin: 1.5em auto;
+  box-shadow: 0px -8px 16px rgba(255, 255, 255, 0.4), 0px 16px 24px rgba(55, 71, 79, 0.16);
+}
+
+.workshop-name {
+  margin: 0.5em 1em;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.workshop-icon-control {
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--tertiary-color);
+}
+
+
+.workshop-icon-control .request-icon {
+  height: 30px;
+}

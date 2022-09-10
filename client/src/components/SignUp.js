@@ -92,7 +92,7 @@ export default function SignUp(props) {
       </div>
       {inputFields}
       <div className="signup-form-submit-container">
-        <input className="signup-form-submit" type="submit" value="Sign In" />
+        <input className="signup-form-submit" type="submit" value="Sign Up" />
         <span onClick={() => setBody('login')}>Alerady have an account? Sign in</span>
       </div>
     </form>

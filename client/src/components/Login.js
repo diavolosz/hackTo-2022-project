@@ -47,9 +47,19 @@ export default function Login(props) {
     );
   });
 
+  // const getSelectedValue = () => {
+  //   let e = document.getElementById("id-user-list-1").value
+  //   console.log(e)
+  // }
+
   const onSubmit = event => {
     event.preventDefault();
-    console.log(formValues)
+    let selected = document.getElementById("id-user-list-1").value
+    if (selected === 'user') {
+      setBody('body-user')
+    } else {
+      console.log('error')
+    }
     // axios
     //   .post(`/api/login`, {
     //     ...formValues,
@@ -68,12 +78,12 @@ export default function Login(props) {
   return (
     <form className="signin-form" onSubmit={onSubmit}>
       <div className="signin-form-title-container">
-        <p className="signin-form-title">Sign Up</p>
-        <select className="select-type">
-          <option>Choose User Type</option>
-          <option>User</option>
-          <option>Mentor</option>
-          <option>Employer</option>
+        <p className="signin-form-title">Sign In</p>
+        <select id="id-user-list-1" className="select-type">
+          <option value='null'>Choose User Type</option>
+          <option value='user'>User</option>
+          <option value='mentor'>Mentor</option>
+          <option value='employer'>Employer</option>
         </select>
       </div>
       {inputFields}

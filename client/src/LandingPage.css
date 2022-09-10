@@ -24,6 +24,7 @@
   height: 30vh;
   margin: 0;
 }
+
 .landing-logo:hover {
   cursor: pointer;
 }
@@ -134,4 +135,13 @@
   width: 85%;
   font-size: 22px;
   font-weight: bold;
+}
+
+.bottom-wavy {
+  position: absolute;
+  height: 200px;
+  width: 100vw;
+  object-fit: cover;
+  object-position: 0 -220px;
+  left: 0%;
 }

@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Navigation from './components/Navigation'
 import Login from './components/Login'
 import SignUp from "./components/SignUp"
+import ArticleBodyUser from './components/ArticleBody_User'
 
 import './LandingPage.css'
 import './App.css';
@@ -13,7 +14,7 @@ import './App.css';
 export default function LandingPage() {
 
   const [user, setUser] = useState()
-  const [body, setBody] = useState('signup')
+  const [body, setBody] = useState('body-user')
 
 
   return (
@@ -22,7 +23,7 @@ export default function LandingPage() {
         <div className="landing-logo" onClick={() => setBody('landing')}>
           <img className='logo-text' src='img/logo.png' />
         </div>
-        <Navigation setBody={setBody}/>
+        <Navigation setBody={setBody} />
       </div>
       <div className='yellow-sq-background'></div>
 
@@ -65,12 +66,18 @@ export default function LandingPage() {
       }
 
 
-      {body === 'login' && <Login setBody={setBody}/>}
+      {body === 'login' && <Login setBody={setBody} />}
 
-      {body === 'signup' && <SignUp setBody={setBody}/>}
+      {body === 'signup' && <SignUp setBody={setBody} />}
+
+      {body === 'body-user' && <ArticleBodyUser />}
+
+
+
+      
 
       <Footer />
-
+      <img className='bottom-wavy' src='img/bottomNav.png' />
     </div>
   )
 }
