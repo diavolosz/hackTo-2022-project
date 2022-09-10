@@ -4,8 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 import '../styles/Login.css'
 
-export default function Login() {
+export default function Login(props) {
+
   const navigate = useNavigate();
+  const { setBody } = props
 
   const [formValues, parsedFormData, handleInput, errors] = useForm([
     {
@@ -77,7 +79,7 @@ export default function Login() {
       {inputFields}
       <div className="signin-form-submit-container">
         <input className="signin-form-submit" type="submit" value="Sign In" />
-        <span>No account? Sign up</span>
+        <span onClick={() => setBody('signup')}>No account? Sign up</span>
       </div>
     </form>
   )

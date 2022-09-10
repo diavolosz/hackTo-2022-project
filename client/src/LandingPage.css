@@ -24,6 +24,9 @@
   height: 30vh;
   margin: 0;
 }
+.landing-logo:hover {
+  cursor: pointer;
+}
 
 .logo-text-mid {
   font-style: normal;

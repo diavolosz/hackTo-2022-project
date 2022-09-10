@@ -19,10 +19,10 @@ export default function LandingPage() {
   return (
     <div id="landing">
       <div className="landing-nav">
-        <div className="landing-logo">
+        <div className="landing-logo" onClick={() => setBody('landing')}>
           <img className='logo-text' src='img/logo.png' />
         </div>
-        <Navigation />
+        <Navigation setBody={setBody}/>
       </div>
       <div className='yellow-sq-background'></div>
 
@@ -65,9 +65,9 @@ export default function LandingPage() {
       }
 
 
-      {body === 'login' && <Login />}
+      {body === 'login' && <Login setBody={setBody}/>}
 
-      {body === 'signup' && <SignUp />}
+      {body === 'signup' && <SignUp setBody={setBody}/>}
 
       <Footer />
 

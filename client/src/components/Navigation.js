@@ -5,9 +5,11 @@ import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import '../styles/Navigation.css'
 
 
-export default function Navigation() {
+export default function Navigation(props) {
 
   const [logged, setLogged] = useState(false)
+
+  const { setBody } = props
 
   return (
     <div className="nav-container">
@@ -21,7 +23,7 @@ export default function Navigation() {
 
       {logged === false &&
         <div className='button-container'>
-          <span className="signup-button">Sign In</span>
+          <span className="signup-button" onClick={() => setBody('login')}>Sign In</span>
         </div>
       }
 
