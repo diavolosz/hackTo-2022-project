@@ -2,18 +2,13 @@ import { useForm } from "../hooks/useForm";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import '../styles/Login.css'
 
 export default function Login() {
   const navigate = useNavigate();
 
   const [formValues, parsedFormData, handleInput, errors] = useForm([
     {
-      name: "user type",
-      value: "",
-      placeholder: "User Type",
-      type: "text",
-      required: true,
-    }, {
       name: "email",
       value: "",
       placeholder: "Email",
@@ -29,21 +24,24 @@ export default function Login() {
     },
   ]);
 
-  const inputFields = formValues.map(formInput => {
+  const inputFields = formValues.map((formInput, index) => {
     const { name, placeholder, type, required, value } = formInput;
 
     return (
-      <input
-        {...{
-          key: name,
-          name,
-          value,
-          placeholder,
-          onChange: handleInput,
-          type,
-          required,
-        }}
-      />
+      <div className='input-box' key={index}>
+        <label>Enter your {formInput.name}</label>
+        <input
+          {...{
+            key: name,
+            name,
+            value,
+            placeholder,
+            onChange: handleInput,
+            type,
+            required,
+          }}
+        />
+      </div>
     );
   });
 
@@ -66,10 +64,21 @@ export default function Login() {
   };
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <p className="form-title">Log in</p>
+    <form className="signin-form" onSubmit={onSubmit}>
+      <div className="signin-form-title-container">
+        <p className="signin-form-title">Sign Up</p>
+        <select className="select-type">
+          <option>Choose User Type</option>
+          <option>User</option>
+          <option>Mentor</option>
+          <option>Employer</option>
+        </select>
+      </div>
       {inputFields}
-      <input className="form-submit" type="submit" value="Log In" />
+      <div className="signin-form-submit-container">
+        <input className="signin-form-submit" type="submit" value="Sign In" />
+        <span>No account? Sign up</span>
+      </div>
     </form>
   )
 }

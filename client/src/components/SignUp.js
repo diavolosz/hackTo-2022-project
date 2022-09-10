@@ -2,6 +2,7 @@ import { useForm } from "../hooks/useForm";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import '../styles/SignUp.css'
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -22,13 +23,6 @@ export default function SignUp() {
       required: true,
     },
     {
-      name: "user type",
-      value: "",
-      placeholder: "User Type",
-      type: "text",
-      required: true,
-    },
-    {
       name: "password",
       placeholder: "Password",
       value: "",
@@ -36,7 +30,7 @@ export default function SignUp() {
       required: true,
     },
     {
-      name: "password_confirmation",
+      name: "password confirmation",
       placeholder: "Re-enter Password",
       value: "",
       type: "password",
@@ -44,21 +38,24 @@ export default function SignUp() {
     },
   ]);
 
-  const inputFields = formValues.map(formInput => {
+  const inputFields = formValues.map((formInput, index) => {
     const { name, placeholder, type, required, value } = formInput;
 
     return (
-      <input
-        {...{
-          key: name,
-          name,
-          value,
-          placeholder,
-          onChange: handleInput,
-          type,
-          required,
-        }}
-      />
+      <div className='input-box' key={index}>
+        <label>Enter your {formInput.name}</label>
+        <input
+          {...{
+            key: name,
+            name,
+            value,
+            placeholder,
+            onChange: handleInput,
+            type,
+            required,
+          }}
+        />
+      </div>
     );
   });
 
@@ -81,10 +78,21 @@ export default function SignUp() {
   };
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <p className="form-title">Sign Up</p>
+    <form className="signup-form" onSubmit={onSubmit}>
+      <div className="signup-form-title-container">
+        <p className="signup-form-title">Sign Up</p>
+        <select className="select-type">
+          <option>Choose User Type</option>
+          <option>User</option>
+          <option>Mentor</option>
+          <option>Employer</option>
+        </select>
+      </div>
       {inputFields}
-      <input className="form-submit" type="submit" value="Log In" />
+      <div className="signup-form-submit-container">
+        <input className="signup-form-submit" type="submit" value="Sign In" />
+        <span>Alerady have an account? Sign in</span>
+      </div>
     </form>
   )
 }
