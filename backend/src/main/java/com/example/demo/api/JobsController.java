@@ -28,7 +28,7 @@ public class JobsController {
 
     @PostMapping
     public boolean postJob(@NonNull @RequestBody Job job){
-        System.out.println("new user: " +  job.getName());
+        System.out.println("new job: " +  job.getName());
         jobService.postJob(job);
         return true;
     }
