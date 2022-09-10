@@ -6,3 +6,12 @@
   --secondary-color: #6C5CE7;
   --tertiary-color: #2D3436;
 }
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+textarea::placeholder, input::placeholder{
+  font-family: 'Inter';
+  font-size: 14px;
+}

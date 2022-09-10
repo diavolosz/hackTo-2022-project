@@ -1,0 +1,159 @@
+
+
+.footer-container {
+  width: 75vw;
+  height: 60vh;
+  margin: 1em auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+  height: 90%;
+}
+
+.block-title {
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  color: #ADADAD;
+  margin-bottom: 0.5em;
+}
+
+.block-L .media .media-icons-container {
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.media-icons-container .media-icon {
+  height: 30px;
+  width: 30px;
+  padding: 0.5em;
+  margin: 1em 0;
+}
+
+.media-icons-container .media-icon:hover {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+  scale: 1.2;
+}
+
+/* ----------------------------- */
+
+.information {
+  margin-top: 5em;
+}
+
+.information .information-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  margin: 1em 0;
+}
+
+
+.information .information-items div{
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.information .information-items div span{
+  width: 30%;
+}
+
+.information .information-items div span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* --------------------------- */
+
+
+.media {
+  display: flex;
+  flex-direction: column;
+}
+
+.media .block-content{
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+/* ----------------------------- */
+
+.contact-form {
+  margin-top: 5em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form form{
+  margin: 8px 0;
+  width: 90%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact-form form div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-form form .short-fill{
+  height: 30px;
+  width: 40%;
+  background-color: rgb(231, 231, 231);
+  border-radius: 16px;
+  border: none;
+  padding: 0.5em 1em;
+  border: 2px solid rgb(204, 204, 204);
+
+}
+
+.contact-form form textarea{
+  background-color: rgb(231, 231, 231);
+  border: none;
+  border-radius: 16px;
+  border: 2px solid rgb(204, 204, 204);
+  padding: 1.5em 1em;
+  resize: none;
+  width: 60%;
+  margin-right: 2em; 
+}
+
+
+.contact-form form textarea::placeholder{
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: large;
+}
+
+.contact-form form .contact-submit-buttom{
+  background-color: rgb(231, 231, 231);
+  border-radius: 12px;
+  border: none;
+  border-radius: 16px;
+  height: 100%;
+  width: 30%;
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--secondary-color);
+}
+

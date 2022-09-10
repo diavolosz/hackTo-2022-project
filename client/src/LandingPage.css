@@ -1,15 +1,25 @@
+#landing {
+  width: 80vw;
+  margin: auto;
+}
 
 .landing-nav {
-  width: 90vw;
-  margin: auto;
+  width: 100%;
+  margin: 3em auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+
+}
+
+.logo-text {
+  height: 220px;
 }
 
 .landing-logo {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   width: fit-content;
   height: 30vh;
   margin: 0;
@@ -29,4 +39,96 @@
   font-size: 50px;
 
   color: #FDCB6E;
+}
+
+
+/*---------------------- */
+
+.landing-slogan-container {
+  height: 50vh;
+  margin: 5em auto 0 auto;
+  /* background-color: red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.slogan-container {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slogan-large {
+  font-size: 65px;
+  font-weight: bold;
+}
+
+.slogan-small {
+  margin: 1em 0;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.landing-img {
+  width: 650px;
+  border-radius: 99px;
+  margin-left: 13em;
+}
+
+.yellow-sq-background {
+  position: absolute;
+  z-index: -1;
+  width: 1376.03px;
+  height: 850.91px;
+  left: 73%;
+  top: -23%;
+
+  background-color: var(--primary-color);
+  border-radius: 99px;
+  transform: rotate(-45deg);
+}
+
+/* --------------------- */
+
+.landing-redirect-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10em auto;
+}
+
+.button-block {
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redirect-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 327px;
+  font-weight: 700;
+  font-size: 40px;
+  color: white;
+  background-color: var(--secondary-color);
+  border-radius: 24px;
+  margin-bottom: 0.5em;
+}
+
+
+.redirect-buttons:hover {
+  cursor: pointer;
+  background-color: #4e42a8;
+}
+
+.redirect-description {
+  width: 85%;
+  font-size: 22px;
+  font-weight: bold;
 }
