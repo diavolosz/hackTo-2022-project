@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEyeSlash, faCheckCircle, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faBookmark, faCalendar } from '@fortawesome/free-regular-svg-icons'
 
-import '../styles/ArticleBody_User.css'
+import '../styles/ArticleBody_Employer.css'
 
-export default function ArticleBodyUser() {
+export default function ArticleBodyEmployer() {
 
   const data = {
-    user: 'Cindy',
+    user: 'Amanda(Boss)',
     jobs: [
       {
         job: 'Factory line worker',
@@ -40,13 +40,13 @@ export default function ArticleBodyUser() {
         description: 'At the Markham Randstad office, we’re committed to tackling the challenges that come with career-searching. We’re dedicated to finding you the job opportunity that you’ve been looking for. Please check out www.randstad.ca for all the roles currently open at Randstad!'
       },
     ],
-    mentors: [
-      { name: 'Apple', job: 'food engineering' },
-      { name: 'banana', job: 'web engineering' },
-      { name: 'pear', job: 'chemical engineering' },
-      { name: 'Apple', job: 'engineering' },
-      { name: 'banana', job: 'computer engineering' },
-      { name: 'pear', job: 'chemical engineering' },
+    prospects: [
+      { name: 'Apple', skill1: 'food engineering', skill2: 'something some skills' },
+      { name: 'banana', skill1: 'web engineering', skill2: 'something some skills' },
+      { name: 'pear', skill1: 'chemical engineering', skill2: 'something some skills' },
+      { name: 'Apple', skill1: 'engineering', skill2: 'something some skills' },
+      { name: 'banana', skill1: 'computer engineering', skill2: 'something some skills' },
+      { name: 'pear', skill1: 'chemical engineering', skill2: 'something some skills' },
     ],
     workshops: [
       'Apple',
@@ -60,7 +60,6 @@ export default function ArticleBodyUser() {
 
   const [jobDisplay, setJobDisplay] = useState('')
   const [jobDisplayDetails, setJobDisplayDetails] = useState({})
-
 
   const handleDisplay = (each) => {
     setJobDisplay('jobDisplay')
@@ -77,8 +76,6 @@ export default function ArticleBodyUser() {
     setJobDisplay('')
   }
 
-
-
   const Joblist = data.jobs.map((job) => {
     return (
       <div className="job-item-container" onClick={() => handleDisplay(job)}>
@@ -92,15 +89,17 @@ export default function ArticleBodyUser() {
   })
 
 
-  const Mentorlist = data.mentors.map((mentor) => {
+
+  const Mentorlist = data.prospects.map((prospect) => {
     return (
       <div className="mentor-container">
         <div className='mentor-inner-wrapper'>
           <div>
-            <span className='mentor-name'>{mentor.name}</span>
-            <span className='mentor-job'>{mentor.job}</span>
+            <span className='mentor-name'>{prospect.name}</span>
+            <span className='mentor-job'>{prospect.skill1}</span>
+            <span className='mentor-job'>{prospect.skill2}</span>
             <div className='request-meeting-button'>
-              <span>Request a meeting</span>
+              <span>Request an interview</span>
               <FontAwesomeIcon className='request-icon' icon={faCalendar} />
             </div>
           </div>
@@ -128,8 +127,9 @@ export default function ArticleBodyUser() {
       <div className='content-container'>
 
         <div className="inner-list">
-          <span className='job-for-you'>Jobs for you</span>
+          <span className='job-for-you'>Jobs you posted</span>
           {jobDisplay === '' && Joblist}
+
 
           {jobDisplay === 'jobDisplay' &&
             <div className='job-detailed-description' >
@@ -138,25 +138,24 @@ export default function ArticleBodyUser() {
                 <div className='clicked-job-title-control'>
                   <span className='clicked-job-title'>{jobDisplayDetails.job}</span>
                   <div className="job-icon-control">
-                    <FontAwesomeIcon icon={faEyeSlash} />
-                    <FontAwesomeIcon icon={faBookmark} />
+                    {/* <FontAwesomeIcon icon={faEyeSlash} />
+                    <FontAwesomeIcon icon={faBookmark} /> */}
                   </div>
                 </div>
 
                 <div className='clicked-job-location-apply'>
                   <span className='clicked-job-location'>{jobDisplayDetails.location}</span>
-                  <span className='apply-button'>Apply</span>
                 </div>
 
                 <div className='clicked-job-skill-block'>
                   <span className='skill-required'>Skills required</span>
                   <div className='skill-block'>
                     {jobDisplayDetails.skill1}
-                    <FontAwesomeIcon className='icon' icon={faCheckCircle} />
+                    {/* <FontAwesomeIcon className='icon' icon={faCheckCircle} /> */}
                   </div>
                   <div className='skill-block'>
                     {jobDisplayDetails.skill2}
-                    <FontAwesomeIcon className='icon' icon={faCheckCircle} />
+                    {/* <FontAwesomeIcon className='icon' icon={faCheckCircle} /> */}
                   </div>
                 </div>
 
@@ -166,7 +165,7 @@ export default function ArticleBodyUser() {
               <div className='bottom-container'>
                 {jobDisplayDetails.description}
               </div>
-              <FontAwesomeIcon className='return-button' icon={faCircleXmark} onClick={() => resetDisplay()}/>
+              <FontAwesomeIcon className='return-button' icon={faCircleXmark} onClick={() => resetDisplay()} />
             </div>}
 
         </div>
@@ -174,12 +173,12 @@ export default function ArticleBodyUser() {
         <div className="resource-container">
 
           <div className="mentor-queue">
-            <p className='mentor-title'>Mentors</p>
+            <p className='mentor-title'>Top prospects</p>
             {Mentorlist}
           </div>
 
           <div className="mentor-queue">
-            <p className='mentor-title'>WorkShops</p>
+            <p className='mentor-title'>Your WorkShops</p>
             {Workshoplist}
           </div>
 

@@ -57,7 +57,9 @@ export default function Login(props) {
     let selected = document.getElementById("id-user-list-1").value
     if (selected === 'user') {
       setBody('body-user')
-    } else {
+    } else if (selected === 'employer') {
+      setBody('body-employer')
+    }else {
       console.log('error')
     }
     // axios

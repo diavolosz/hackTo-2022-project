@@ -7,6 +7,7 @@ import Navigation from './components/Navigation'
 import Login from './components/Login'
 import SignUp from "./components/SignUp"
 import ArticleBodyUser from './components/ArticleBody_User'
+import ArticleBodyEmployer from './components/ArticleBody_Employer'
 
 import './LandingPage.css'
 import './App.css';
@@ -14,7 +15,7 @@ import './App.css';
 export default function LandingPage() {
 
   const [user, setUser] = useState()
-  const [body, setBody] = useState('body-user')
+  const [body, setBody] = useState('landing')
 
 
   return (
@@ -23,7 +24,7 @@ export default function LandingPage() {
         <div className="landing-logo" onClick={() => setBody('landing')}>
           <img className='logo-text' src='img/logo.png' />
         </div>
-        <Navigation setBody={setBody} />
+        <Navigation setBody={setBody} body={body}/>
       </div>
       <div className='yellow-sq-background'></div>
 
@@ -72,7 +73,7 @@ export default function LandingPage() {
 
       {body === 'body-user' && <ArticleBodyUser />}
 
-
+      {body === 'body-employer' && <ArticleBodyEmployer />}
 
       
 

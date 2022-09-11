@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
@@ -9,7 +9,9 @@ export default function Navigation(props) {
 
   const [logged, setLogged] = useState(false)
 
-  const { setBody } = props
+
+  const { setBody, body } = props
+
 
   return (
     <div className="nav-container">
@@ -21,18 +23,19 @@ export default function Navigation(props) {
         <span className='nav-item'>Contact us</span>
       </div>
 
-      {logged === false &&
+      {body === 'landing' &&
         <div className='button-container'>
           <span className="signup-button" onClick={() => setBody('login')}>Sign In</span>
         </div>
       }
 
 
-      {logged === true &&
+      {body === 'body-user' &&
         <div className='nav-icon-container'>
           <FontAwesomeIcon className='nav-icons' icon={faEnvelope} />
           <FontAwesomeIcon className='nav-icons' icon={faCircleUser} />
-        </div>}
+        </div>
+      }
 
       <div>
         <select id='language-select'>

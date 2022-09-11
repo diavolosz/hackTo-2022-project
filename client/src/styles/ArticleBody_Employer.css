@@ -3,12 +3,12 @@
   height: 600px;
 }
 
-.username-display {
+/* .username-display {
   font-size: 50px;
   font-weight: bold;
   height: 10%;
-  margin: 0 0 1em 2em
-}
+  margin: 0 0 1em 0.5em
+} */
 
 .content-container {
   height: 90%;
@@ -19,7 +19,7 @@
 }
 
 .inner-list {
-  background-color: var(--secondary-light);
+  background-color: var(--secondary-color);
   height: 100%;
   width: 45%;
   border-radius: 24px;
@@ -35,10 +35,15 @@
   display: none;
 }
 
-/* .inner-list span {
+.inner-list .job-for-you {
   margin: 0.5em 1em;
   color: white;
-} */
+}
+
+.inner-list .job-name {
+  margin: 0.5em 1em;
+  color: white;
+}
 
 .job-item-container {
   width: 90%;
@@ -52,10 +57,6 @@
 
 .inner-list .job-name {
   color: var(--tertiary-color);
-}
-
-.job-item-container:hover {
-  cursor: pointer;
 }
 
 .job-icon-control {
@@ -189,96 +190,4 @@
 
 .workshop-icon-control .request-icon {
   height: 30px;
-}
-
-/* -------------------- */
-
-.job-detailed-description {
-  width: 90%;
-  margin: 0 auto;
-  height: fit-content;
-  background-color: white;
-  border-radius: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.job-detailed-description span {
-  color: var(--tertiary-color);
-}
-
-.clicked-job-title-control {
-  width: 85%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1em;
-  font-size: 30px;
-  line-height: 70px;
-}
-
-.clicked-job-location-apply {
-  width: 85%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-}
-.apply-button {
-  width: 25%;
-  text-align: center;
-  padding: 0.5em 0.5em;
-  background-color: var(--primary-color);
-  border-radius: 24px;
-}
-
-.clicked-job-skill-block {
-  width: 85%;
-  margin: 1em auto 1.5em auto;
-}
-
-.skill-required {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
-  line-height: 45px;
-}
-
-.skill-block {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 70%;
-  line-height: 45px;
-
-}
-
-.skill-block .icon {
-  height: 30px;
-}
-
-.bottom-container {
-  width: 85%;
-  margin: auto;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.return-button {
-  margin: 1em;
-  height: 40px;
-}
-
-.return-button:hover {
-  cursor: pointer;
 }
