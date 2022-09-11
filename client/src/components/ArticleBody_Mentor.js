@@ -49,12 +49,12 @@ export default function ArticleBodyMentor() {
       { name: 'pear', skill1: 'chemical engineering', skill2: 'something some skills' },
     ],
     workshops: [
-      'Apple',
-      'banana',
-      'pear',
-      'Apple',
-      'banana',
-      'pear',
+      'Student-centricity in theory and practice',
+      'Motivation and engagement',
+      'Using web-based resources and tools',
+      'Building Effective Teams',
+      'Creating a Results-Driven School',
+      'Toward more Effective Instruction ',
     ]
   }
 
@@ -100,8 +100,8 @@ export default function ArticleBodyMentor() {
             <span className='mentor-job'>{mentee.skill2}</span>
             <div className='request-meeting-button'>
               <span>Accept Meeting</span>
-              <FontAwesomeIcon className='request-icon' icon={faCheckCircle} />
-              <FontAwesomeIcon className='request-icon' icon={faCircleXmark} />
+              <FontAwesomeIcon className='accept request-icon' icon={faCheckCircle} />
+              <FontAwesomeIcon className='decline request-icon' icon={faCircleXmark} />
             </div>
           </div>
           <img src='img/mentor.jpg' />

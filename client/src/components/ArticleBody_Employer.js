@@ -49,12 +49,12 @@ export default function ArticleBodyEmployer() {
       { name: 'pear', skill1: 'chemical engineering', skill2: 'something some skills' },
     ],
     workshops: [
-      'Apple',
-      'banana',
-      'pear',
-      'Apple',
-      'banana',
-      'pear',
+      'Student-centricity in theory and practice',
+      'Motivation and engagement',
+      'Using web-based resources and tools',
+      'Building Effective Teams',
+      'Creating a Results-Driven School',
+      'Toward more Effective Instruction ',
     ]
   }
 

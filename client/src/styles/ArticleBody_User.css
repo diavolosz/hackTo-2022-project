@@ -158,6 +158,11 @@
   height: 20px;
 }
 
+.request-meeting-button:hover {
+  cursor: pointer;
+  background-color: #f3af32 !important;
+}
+
 /* -------------------------- */
 
 .workshop-item-container {
@@ -235,6 +240,11 @@
   padding: 0.5em 0.5em;
   background-color: var(--primary-color);
   border-radius: 24px;
+}
+
+.apply-button:hover {
+  cursor: pointer;
+  background-color: #f3af32 !important;
 }
 
 .clicked-job-skill-block {
