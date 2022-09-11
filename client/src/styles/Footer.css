@@ -99,6 +99,10 @@
   flex-direction: column;
 }
 
+.contact-form-entry {
+  margin-bottom: 1em;
+}
+
 .contact-form form{
   margin: 8px 0;
   width: 90%;
@@ -117,7 +121,7 @@
 
 .contact-form form .short-fill{
   height: 30px;
-  width: 40%;
+  width: 43%;
   background-color: rgb(231, 231, 231);
   border-radius: 16px;
   border: none;
@@ -149,8 +153,8 @@
   border-radius: 12px;
   border: none;
   border-radius: 16px;
-  height: 100%;
-  width: 30%;
+  height: 80px;
+  width: 217.93px;
   font-size: 25px;
   font-weight: 600;
   color: white;

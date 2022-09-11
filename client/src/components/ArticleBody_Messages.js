@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEyeSlash, faCheckCircle, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-import { faBookmark, faCalendar } from '@fortawesome/free-regular-svg-icons'
+import { faPaperclip } from '@fortawesome/free-solid-svg-icons'
+import { faSmile } from '@fortawesome/free-regular-svg-icons'
 import axios from 'axios'
 
 import '../styles/ArticleBody_Messages.css'
@@ -68,6 +68,11 @@ export default function ArticleBodyMessage() {
 
   const handleDisplay = () => {
     setMessage(true)
+
+    // axios.get(`http://spotlight-env.eba-pn23zk2p.us-west-1.elasticbeanstalk.com/api/v1/conversation`)
+    //   .then((res) => {
+    //     console.log(res)
+    //   })
   }
 
   const resetDisplay = () => {
@@ -88,15 +93,17 @@ export default function ArticleBodyMessage() {
     if (index % 2 !== 0) {
       return (
         <div className='chat-block chat-block-left'>
-          <span className='chat-mentor'>{each.userid}</span>
-          <span className='chat-message'>{each.message}</span>
+          {/* <span className='chat-mentor'>{each.userid}</span> */}
+          <p className='chat-message'><span>{each.message}</span></p>
+          <img className='chat-icon' src='img/iconP.jpg' />
         </div>
       )
     } else {
       return (
         <div className='chat-block chat-block-right'>
-          <span className='chat-mentor'>{each.userid}</span>
-          <span className='chat-message'>{each.message}</span>
+          {/* <span className='chat-mentor'>{each.userid}</span> */}
+          <img className='chat-icon' src='img/iconP.jpg' />
+          <p className='chat-message'><span>{each.message}</span></p>
         </div>
       )
     }
@@ -116,21 +123,30 @@ export default function ArticleBodyMessage() {
           {chatList}
           {chatList}
         </div>
-
         <div className='message-wrapper'>
           {message &&
-            <div className='chat-history-container'>
-              <div>
-                {chatHistory}
+            <div>
+              <div className='chat-top'>
+                <img className='chat-icon' src='img/iconP.jpg' />
+                <p className='chat-mentor-name'>Binit</p>
               </div>
-              <div className='messagebox'>
-                <textarea cols={45} rows={4} />
-                <div className='messagebox-send'><span>send</span></div>
+
+              <div className='chat-history-container'>
+                <div>
+                  {chatHistory}
+                </div>
+                <div className='messagebox'>
+                  <FontAwesomeIcon className='box-icon' icon={faSmile} />
+                  <input className='input-field' placeholder='Write a message...' />
+                  {/* <div className='messagebox-send'><span>send</span></div> */}
+                  <FontAwesomeIcon className='box-icon' icon={faPaperclip} />
+                </div>
               </div>
             </div>
+
+
           }
         </div>
-
 
       </div>
     </div>
