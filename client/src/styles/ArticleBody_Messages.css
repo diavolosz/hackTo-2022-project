@@ -1,0 +1,110 @@
+.article-body-container {
+  margin: 6em 0 8em 0;
+  height: 600px;
+}
+
+.chatList-container {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chatList-wrapper {
+  background-color: var(--secondary-color);
+  width: 45%;
+  border-radius: 24px;
+  font-weight: bold;
+  box-shadow: 0px -8px 16px rgb(255 255 255 / 40%), 0px 16px 24px rgb(55 71 79 / 16%);
+  overflow-y: scroll;
+}
+
+.chatList-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-block {
+  width: 90%;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 12px;
+  margin: 2em auto;
+}
+
+.chat-mentor {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--tertiary-color);
+  margin: 0 1em;
+}
+
+.chat-message {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--tertiary-color);
+  margin: 0 1.5em;
+}
+
+.message-container {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-wrapper {
+  background-color: white;
+  width: 45%;
+  border-radius: 24px;
+  font-weight: bold;
+  box-shadow: 0px -8px 16px rgb(255 255 255 / 40%), 0px 16px 24px rgb(55 71 79 / 16%);
+  overflow-y: scroll;
+}
+.message-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-block-left {
+  text-align: end;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.411);
+  border-radius: 0px;
+}
+
+.chat-block-right {
+  text-align: start;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.411);
+  border-radius: 0px;
+}
+
+
+.messagebox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.messagebox-send {
+  margin: 0 2em;  
+  background-color: var(--secondary-color);
+  color: white;
+  height: 45px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+
+.messagebox-send:hover {
+  cursor: pointer;
+  background-color: #4d41ad;
+}

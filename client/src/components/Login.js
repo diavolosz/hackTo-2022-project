@@ -59,7 +59,9 @@ export default function Login(props) {
       setBody('body-user')
     } else if (selected === 'employer') {
       setBody('body-employer')
-    }else {
+    } else if (selected === 'mentor') {
+      setBody('body-mentor')
+    } else {
       console.log('error')
     }
     // axios

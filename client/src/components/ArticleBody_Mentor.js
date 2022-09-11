@@ -6,7 +6,7 @@ import { faBookmark, faCalendar } from '@fortawesome/free-regular-svg-icons'
 
 import '../styles/ArticleBody_Employer.css'
 
-export default function ArticleBodyEmployer() {
+export default function ArticleBodyMentor() {
 
   const data = {
     user: 'Amanda(Boss)',
@@ -40,7 +40,7 @@ export default function ArticleBodyEmployer() {
         description: 'At the Markham Randstad office, we’re committed to tackling the challenges that come with career-searching. We’re dedicated to finding you the job opportunity that you’ve been looking for. Please check out www.randstad.ca for all the roles currently open at Randstad!'
       },
     ],
-    prospects: [
+    Mentees: [
       { name: 'Apple', skill1: 'food engineering', skill2: 'something some skills' },
       { name: 'banana', skill1: 'web engineering', skill2: 'something some skills' },
       { name: 'pear', skill1: 'chemical engineering', skill2: 'something some skills' },
@@ -90,17 +90,18 @@ export default function ArticleBodyEmployer() {
 
 
 
-  const Mentorlist = data.prospects.map((prospect) => {
+  const Mentorlist = data.Mentees.map((mentee) => {
     return (
       <div className="mentor-container">
         <div className='mentor-inner-wrapper'>
           <div>
-            <span className='mentor-name'>{prospect.name}</span>
-            <span className='mentor-job'>{prospect.skill1}</span>
-            <span className='mentor-job'>{prospect.skill2}</span>
+            <span className='mentor-name'>{mentee.name}</span>
+            <span className='mentor-job'>{mentee.skill1}</span>
+            <span className='mentor-job'>{mentee.skill2}</span>
             <div className='request-meeting-button'>
-              <span>Request an interview</span>
-              <FontAwesomeIcon className='request-icon' icon={faCalendar} />
+              <span>Accept Meeting</span>
+              <FontAwesomeIcon className='request-icon' icon={faCheckCircle} />
+              <FontAwesomeIcon className='request-icon' icon={faCircleXmark} />
             </div>
           </div>
           <img src='img/mentor.jpg' />
@@ -114,8 +115,8 @@ export default function ArticleBodyEmployer() {
       <div className="workshop-item-container">
         <span className='workshop-name'>{workshop}</span>
         <div className="workshop-icon-control">
-          {/* <FontAwesomeIcon className='request-icon' icon={faEyeSlash} />
-          <FontAwesomeIcon className='request-icon' icon={faBookmark} /> */}
+          <FontAwesomeIcon className='request-icon' icon={faEyeSlash} />
+          <FontAwesomeIcon className='request-icon' icon={faBookmark} />
         </div>
       </div>
     )
@@ -127,7 +128,7 @@ export default function ArticleBodyEmployer() {
       <div className='content-container'>
 
         <div className="inner-list">
-          <span className='job-for-you'>Jobs you posted</span>
+          <span className='job-for-you'>Avaliable Jobs</span>
           {jobDisplay === '' && Joblist}
 
 
@@ -138,8 +139,8 @@ export default function ArticleBodyEmployer() {
                 <div className='clicked-job-title-control'>
                   <span className='clicked-job-title'>{jobDisplayDetails.job}</span>
                   <div className="job-icon-control">
-                    {/* <FontAwesomeIcon icon={faEyeSlash} />
-                    <FontAwesomeIcon icon={faBookmark} /> */}
+                    <FontAwesomeIcon icon={faEyeSlash} />
+                    <FontAwesomeIcon icon={faBookmark} />
                   </div>
                 </div>
 
@@ -151,11 +152,11 @@ export default function ArticleBodyEmployer() {
                   <span className='skill-required'>Skills required</span>
                   <div className='skill-block'>
                     {jobDisplayDetails.skill1}
-                    {/* <FontAwesomeIcon className='icon' icon={faCheckCircle} /> */}
+                    <FontAwesomeIcon className='icon' icon={faCheckCircle} />
                   </div>
                   <div className='skill-block'>
                     {jobDisplayDetails.skill2}
-                    {/* <FontAwesomeIcon className='icon' icon={faCheckCircle} /> */}
+                    <FontAwesomeIcon className='icon' icon={faCheckCircle} />
                   </div>
                 </div>
 
@@ -173,12 +174,12 @@ export default function ArticleBodyEmployer() {
         <div className="resource-container">
 
           <div className="mentor-queue">
-            <p className='mentor-title'>Top prospects</p>
+            <p className='mentor-title'>Mentees List</p>
             {Mentorlist}
           </div>
 
           <div className="mentor-queue">
-            <p className='mentor-title'>Your WorkShops</p>
+            <p className='mentor-title'>WorkShops</p>
             {Workshoplist}
           </div>
 

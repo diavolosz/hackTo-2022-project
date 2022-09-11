@@ -32,7 +32,7 @@ export default function Navigation(props) {
 
       {body === 'body-user' &&
         <div className='nav-icon-container'>
-          <FontAwesomeIcon className='nav-icons' icon={faEnvelope} />
+          <FontAwesomeIcon className='nav-icons' icon={faEnvelope} onClick={() => setBody('message')}/>
           <FontAwesomeIcon className='nav-icons' icon={faCircleUser} />
         </div>
       }

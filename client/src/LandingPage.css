@@ -14,12 +14,13 @@
 }
 
 .logo-text {
-  height: 220px;
+  height: 170px;
 }
 
 .landing-logo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: fit-content;
   height: 30vh;
   margin: 0;
@@ -50,23 +51,23 @@
 
 .landing-slogan-container {
   height: 50vh;
-  margin: 5em auto 0 auto;
-  /* background-color: red; */
+  margin: 0 auto;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 
 }
 
 .slogan-container {
-  width: 550px;
+  width: 488px;
+  margin: 3em 0 0 5em;
   display: flex;
   flex-direction: column;
 }
 
 .slogan-large {
-  font-size: 65px;
-  font-weight: bold;
+  font-size: 60px;
+  font-weight: 700;
 }
 
 .slogan-small {
@@ -78,16 +79,16 @@
 .landing-img {
   width: 650px;
   border-radius: 99px;
-  margin-left: 13em;
+  margin-left: 10em;
 }
 
 .yellow-sq-background {
   position: absolute;
   z-index: -1;
   width: 1376.03px;
-  height: 850.91px;
-  left: 71%;
-  top: -24%;
+  height: 1063.17px;
+  left: 62%;
+  bottom: -45.17px;
 
   background-color: var(--primary-color);
   border-radius: 99px;
@@ -100,7 +101,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 10em auto;
+  margin: 1em auto 4em auto;
 }
 
 .button-block {
@@ -130,6 +131,7 @@
   cursor: pointer;
   background-color: #4e42a8;
 }
+
 
 .redirect-description {
   width: 85%;

@@ -8,6 +8,8 @@ import Login from './components/Login'
 import SignUp from "./components/SignUp"
 import ArticleBodyUser from './components/ArticleBody_User'
 import ArticleBodyEmployer from './components/ArticleBody_Employer'
+import ArticleBodyMentor from './components/ArticleBody_Mentor'
+import ArticleBodyMessage from './components/ArticleBody_Messages'
 
 import './LandingPage.css'
 import './App.css';
@@ -24,7 +26,7 @@ export default function LandingPage() {
         <div className="landing-logo" onClick={() => setBody('landing')}>
           <img className='logo-text' src='img/logo.png' />
         </div>
-        <Navigation setBody={setBody} body={body}/>
+        <Navigation setBody={setBody} body={body} />
       </div>
       <div className='yellow-sq-background'></div>
 
@@ -35,7 +37,10 @@ export default function LandingPage() {
           <div className='landing-slogan-container'>
             <div className='slogan-container'>
               <span className='slogan-large'>Finding the right career for you</span>
-              <span className='slogan-small'>Finding the right career for you</span>
+              <span className='slogan-small'>
+                Connect with employers that meet
+                your needs
+              </span>
             </div>
             <img className='landing-img' src='img/landing.webp' />
           </div>
@@ -75,7 +80,9 @@ export default function LandingPage() {
 
       {body === 'body-employer' && <ArticleBodyEmployer />}
 
-      
+      {body === 'body-mentor' && <ArticleBodyMentor />}
+
+      {body === 'message' && <ArticleBodyMessage />}
 
       <Footer />
       <img className='bottom-wavy' src='img/bottomNav.png' />
